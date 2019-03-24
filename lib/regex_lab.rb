@@ -39,5 +39,5 @@ def valid_phone_number?(phone)
   binding.pry
   numbers = (phone.split(Regexp.union(delimiters)).join
   binding.pry
-  return numbers.match?(regex)
+  numbers.match?(regex)
 end
