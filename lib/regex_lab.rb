@@ -24,17 +24,15 @@ def words_starting_with_un_and_ending_with_ing(text_string)
 end
 
 def words_five_letters_long(text)
-  # binding.pry
   words = []
-  # regex_five_long = /^\w{5}$/
   regex_five_long = /\A\w{5}\Z/i
   text.split.each do |word|
-    if word.match?(regex_five_long)
-    # if word.length==5
-      words << word
-    else
-      words
-    end
+    words << word.scan(regex_five_long)
+    # if word.match?(regex_five_long)
+    #   words << word
+    # else
+    #   words
+    # end
   end
   words
 end
