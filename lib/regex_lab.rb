@@ -1,7 +1,7 @@
 require 'pry'
 def starts_with_a_vowel?(word)
-  regex_downcase = /\A[aeiou]/i
-  if word.match?(regex_downcase)
+  VOWEL_FIRST_REGEX = /\A[aeiou]/i
+  if word.match?(VOWEL_FIRST_REGEX)
     true
   else
     false
@@ -11,9 +11,8 @@ end
 def words_starting_with_un_and_ending_with_ing(text_string)
   array = []
   regex_downcase = /\A(un)+\w+(ing)/i
-  # regex_upcase = /\A(Un)+\w+(ing)/i
   text_string.split.each do |word|
-    array << word if word.match?(regex_downcase) #|| word.match?(regex_upcase)
+    array << word if word.match?(regex_downcase)
   end
   array
 end
