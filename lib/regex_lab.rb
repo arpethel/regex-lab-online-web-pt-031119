@@ -24,7 +24,7 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
   regex_beginning = /\A[A-Z]+\w/
-  regex_end = /[!.?]+\Z/
+  regex_end = /\w+[!.?]+\Z/
   text_array = text.split
   binding.pry
   if text_array[0].match?(regex_beginning) && text_array[-1].match?(regex_end)
