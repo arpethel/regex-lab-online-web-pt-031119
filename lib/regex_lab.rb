@@ -25,13 +25,13 @@ end
 def first_word_capitalized_and_ends_with_punctuation?(text)
   regex_beginning = /\A[A-Z]+\w/
   regex_end = /[!.?]+Z/
-  text.split.each do |word|
-    if text[0].match?(regex_beginning) && text[-1].match?(regex_end)
-      true
-    else
-      false
-    end
+  text_array = text.split
+  if text_array[0].match?(regex_beginning) && text_array[-1].match?(regex_end)
+    true
+  else
+    false
   end
+
 end
 
 def valid_phone_number?(phone)
