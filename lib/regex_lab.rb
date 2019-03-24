@@ -32,6 +32,7 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
+  binding.pry
   regex = /\A[0-9]{10}+\Z/
   binding.pry
   delimiters = ['-', '(', ')', '.']
