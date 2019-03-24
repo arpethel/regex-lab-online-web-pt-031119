@@ -1,8 +1,8 @@
 require 'pry'
 def starts_with_a_vowel?(word)
   regex_downcase = /\A[aeiou]/i
-  regex_upcase = /\A[AEIOU]/i
-  if word.match?(regex_downcase) || word.match?(regex_upcase)
+  # regex_upcase = /\A[AEIOU]/i
+  if word.match?(regex_downcase) #|| word.match?(regex_upcase)
     true
   else
     false
