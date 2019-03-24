@@ -32,5 +32,8 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  # regex = /\A[\d0-9]+-[\d[0-9]+-/
+  regex = /\A[0-9]{10}+\Z/
+  delimiters = ['-', '(', ')', '.']
+  numbers = (phone.split(Regexp.union(delimiters)).join
+  return numbers.match?(regex)
 end
