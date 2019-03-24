@@ -27,7 +27,7 @@ def words_five_letters_long(text)
   words = []
   regex_five_long = /\A\w{5}\Z/i
   text.split.each do |word|
-    words << word.scan(regex_five_long)
+    words << word.match?(regex_five_long)
     # if word.match?(regex_five_long)
     #   words << word
     # else
