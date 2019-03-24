@@ -23,9 +23,17 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-
+  regex_beginning = /\A[A-Z]+\w/
+  regex_end = /[!.?]+Z/
+  text.split.each do |word|
+    if text[0].match?(regex_beginning) && text[-1].match?(regex_end)
+      true
+    else
+      false
+    end
+  end
 end
 
 def valid_phone_number?(phone)
-
+  regex = /\A[\d0-9]+-[\d[0-9]+-/
 end
