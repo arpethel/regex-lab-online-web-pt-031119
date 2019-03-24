@@ -26,7 +26,7 @@ end
 def words_five_letters_long(text)
   # binding.pry
   words = []
-  # regex_five_long = /^\w{5}$/
+  regex_five_long = /^\w{5}$/
   text.split.each do |word|
     if word.scan(regex_five_long)
     # if word.length==5
