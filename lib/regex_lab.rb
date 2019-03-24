@@ -29,7 +29,7 @@ def words_five_letters_long(text)
   text.split.each do |word|
     words << word if word.match?(regex_five_long)
   end
-  # words
+  words
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
