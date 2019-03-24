@@ -38,6 +38,6 @@ def valid_phone_number?(phone)
   delimiters = ['-', '(', ')', '.']
   # binding.pry
   numbers = (phone.split(Regexp.union(delimiters))).join
-  binding.pry
-  # numbers.match?(regex)
+  # binding.pry
+  numbers.match?(regex)
 end
