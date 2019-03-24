@@ -28,13 +28,8 @@ def words_five_letters_long(text)
   regex_five_long = /\A\w{5}\Z/i
   text.split.each do |word|
     words << word if word.match?(regex_five_long)
-    # if word.match?(regex_five_long)
-    #   words << word
-    # else
-    #   words
-    # end
   end
-  words
+  # words
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
